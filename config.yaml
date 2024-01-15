@@ -1,0 +1,101 @@
+baseURL: 'https://arkalim.org'
+languageCode: en-us
+title: Anupama V Mora
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: 'Anupama V Mora'
+    subtitle: Hey there! 👋 I'm a full-stack software engineer with a flair for DevOps and AI. 💻 Excited about using tech to create awesome solutions! 🚀 Proficient in JavaScript, React, Node.js, Java Spring, SQL, MongoDB, Python, and GO. 🛠️ A reliable team player who loves what I do and is always eager to learn and grow. Let's innovate together! 🌟 #CodePassionately
+    imageUrl: 'home/one.png'
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: 'email'
+      url: 'mailto:anupamamorapitiya97@gmail.com'
+    - name: 'linkedin'
+      url: 'https://www.linkedin.com/in/anupamavm/'
+    - name: 'github'
+      url: 'https://github.com/anupamavm'
+    # - name: 'youtube'
+    #   url: 'https://www.youtube.com/c/AbdurRahmanKalim'
+    - name: 'cv'
+      url: 'https://www.canva.com/design/DAFuDRAzYdQ/fram7m0KP0_ecgztfhQz0Q/view?utm_content=DAFuDRAzYdQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ['title', 'permalink', 'summary', 'content']
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
